@@ -26,6 +26,7 @@ public class WebCamController : MonoBehaviour
     [Header("UI Elements")]
     public RawImage cameraDisplay;
     public Image motionIndicator; // モーション位置を示す丸
+    public bool showMotionIndicators = true; // モーションインジケーターの表示を制御
 
     [Header("Motion Detection")]
     public bool enableMotionDetection = true;
@@ -818,6 +819,23 @@ public class WebCamController : MonoBehaviour
 
     void UpdateMotionIndicator()
     {
+        // モーションインジケーターの表示が無効な場合は全て非表示にして終了
+        if (!showMotionIndicators)
+        {
+            // 全てのインジケーターを非表示
+            for (int i = 0; i < motionIndicators.Count; i++)
+            {
+                if (motionIndicators[i] != null)
+                    motionIndicators[i].gameObject.SetActive(false);
+            }
+            
+            // メインのモーションインジケーターも非表示
+            if (motionIndicator != null)
+                motionIndicator.gameObject.SetActive(false);
+                
+            return;
+        }
+        
         // 必要な数だけインジケーターを作成
         while (motionIndicators.Count < motionPositions.Count && motionIndicators.Count < maxMotionIndicators)
         {

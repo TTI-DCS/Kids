@@ -606,7 +606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a44bfc4525ce473db0da7c7b249bb60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedCameraIndex: 3
+  selectedCameraIndex: 0
   availableCameraNames:
   - 
   autoRefreshCameras: 1
@@ -619,6 +619,7 @@ MonoBehaviour:
   use16to9AspectRatio: 0
   cameraDisplay: {fileID: 459266561}
   motionIndicator: {fileID: 0}
+  showMotionIndicators: 0
   enableMotionDetection: 1
   motionThreshold: 0.2
   motionSensitivity: 7
@@ -1047,7 +1048,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4109250381985062111, guid: 563c94d895b194c6999b8d67f6c4e87d, type: 3}
       propertyPath: selectedCameraIndex
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4109250381985062111, guid: 563c94d895b194c6999b8d67f6c4e87d, type: 3}
       propertyPath: use16to9AspectRatio
@@ -1059,6 +1060,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4109250381985062111, guid: 563c94d895b194c6999b8d67f6c4e87d, type: 3}
       propertyPath: performanceDebugging
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4109250381985062111, guid: 563c94d895b194c6999b8d67f6c4e87d, type: 3}
+      propertyPath: showMotionIndicators
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4109250381985062111, guid: 563c94d895b194c6999b8d67f6c4e87d, type: 3}
